@@ -33,7 +33,6 @@ namespace BlankApp1
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
             containerRegistry.RegisterForNavigation<TabbedPage1>();
             containerRegistry.RegisterForNavigation<Page2>();
-            containerRegistry.RegisterForNavigation<Page3>();
         }
     }
 }
