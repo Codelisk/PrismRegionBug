@@ -19,7 +19,7 @@ namespace BlankApp1
         {
             InitializeComponent();
 
-            var result=await NavigationService.NavigateAsync("/TabbedPage1?createTab=NavigationPage|MainPage&createTab=NavigationPage|Page2");
+            var result=await NavigationService.NavigateAsync("/Page2");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)

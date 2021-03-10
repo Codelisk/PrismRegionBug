@@ -7,6 +7,7 @@
     <ContentPage.Content>
         <StackLayout>
             <ContentView prism:RegionManager.RegionName="ContentRegion1" />
+            <Button Text="CLICK HERE" Clicked="Button_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

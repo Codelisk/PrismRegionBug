@@ -24,7 +24,7 @@ namespace BlankApp1.ViewModels
         async void ExecuteClickCommand()
         {
             var pp= _navigationService.GetNavigationUriPath();
-            var res=await this._navigationService.NavigateAsync("/NavigationPage/TabbedPage1?createTab=NavigationPage|MainPage&createTab=NavigationPage|Page2/MainPage");
+            var res=await this._navigationService.NavigateAsync("/Page2/Page2");
         }
     }
 }

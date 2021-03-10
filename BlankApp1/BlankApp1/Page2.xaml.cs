@@ -16,20 +16,26 @@ namespace BlankApp1
     public partial class Page2 : ContentPage, INavigatedAware
     {
         private readonly IRegionManager _regionManager;
-        public Page2(IRegionManager regionManager)
+        INavigationService navigationService;
+        public Page2(IRegionManager regionManager, INavigationService navigationService)
         {
+            this.navigationService = navigationService;
             _regionManager = regionManager;
             InitializeComponent();
         }
 
         public void OnNavigatedFrom(INavigationParameters parameters)
         {
-            throw new NotImplementedException();
         }
 
         public void OnNavigatedTo(INavigationParameters parameters)
         {
             this._regionManager.RequestNavigate("ContentRegion1", nameof(Region1));
+        }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            var test=await this.navigationService.NavigateAsync("Page2/Page2");
         }
     }
 }
