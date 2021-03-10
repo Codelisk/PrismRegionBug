@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="BlankApp1.Views.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="{Binding Title}"
+    NavigationPage.HasBackButton="True">
+    <NavigationPage.TitleView>
+        <Slider />
+    </NavigationPage.TitleView>
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Label Text="Welcome to Xamarin Forms and Prism!" />
+        <Button Command="{Binding ClickCommand}" />
+    </StackLayout>
+
+</ContentPage>
