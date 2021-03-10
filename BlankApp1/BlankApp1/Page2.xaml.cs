@@ -30,12 +30,12 @@ namespace BlankApp1
 
         public void OnNavigatedTo(INavigationParameters parameters)
         {
-            this._regionManager.RequestNavigate("ContentRegion1", nameof(Region1));
+            this._regionManager.RequestNavigate((this.BindingContext as Page2ViewModel).RegionName, nameof(Region1));
         }
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            var test=await this.navigationService.NavigateAsync("Page2/Page2");
+            var test=await this.navigationService.NavigateAsync("/Page2/Page2");
         }
     }
 }

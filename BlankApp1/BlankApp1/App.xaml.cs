@@ -21,7 +21,7 @@ namespace BlankApp1
 
             var result=await NavigationService.NavigateAsync("/Page2");
         }
-
+        public static int count = 0;
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterRegionServices();
@@ -32,7 +32,7 @@ namespace BlankApp1
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
             containerRegistry.RegisterForNavigation<TabbedPage1>();
-            containerRegistry.RegisterForNavigation<Page2>();
+            containerRegistry.RegisterForNavigation<Page2,Page2ViewModel>();
         }
     }
 }

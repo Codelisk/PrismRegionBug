@@ -6,8 +6,8 @@
     xmlns:prism="http://prismlibrary.com">
     <ContentPage.Content>
         <StackLayout>
-            <ContentView prism:RegionManager.RegionName="ContentRegion1" />
-            <Button Text="CLICK HERE" Clicked="Button_Clicked"/>
+            <ContentView prism:RegionManager.RegionName="{Binding RegionName}" />
+            <Button Clicked="Button_Clicked" Text="CLICK HERE" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
